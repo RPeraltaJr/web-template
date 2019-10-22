@@ -22,3 +22,4 @@ A modular template for building web sites or applications
 3. Autoprefixer
 4. HTMLPurifier [http://htmlpurifier.org/]
 5. PHP Environment variables [https://github.com/vlucas/phpdotenv]
+6. Page specific settings for better page load and SEO
