@@ -12,6 +12,7 @@ The following tools are required to get started.
 1. Clone the source repository and change directory.
 
 	```sh
+	git clone https://github.com/RPeraltaJr/web-template.git  
 	cd web-template
 	```
 2. Install all packages.  
