@@ -1,5 +1,5 @@
 # Web Template
-A modular template for building web sites or applications
+A modular template using PHP that lets you split sections (components) into independent, reusable pieces, and think about each piece in isolation.
 
 ## Prerequisites
 The following tools are required to get started.
