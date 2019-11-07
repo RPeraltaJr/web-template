@@ -9,7 +9,7 @@ The following tools are required to get started.
 3. [Gulp](https://gulpjs.com/)
 
 ## Development setup
-1. Clone repo and change directory.  
+1. Clone the source repository and change directory.
 
 	```sh
 	cd web-template
