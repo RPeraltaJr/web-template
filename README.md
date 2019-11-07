@@ -10,15 +10,18 @@ The following tools are required to get started.
 
 ## Development setup
 1. Clone repo and change directory.  
+
 	```sh
 	cd web-template
 	```
 2. Install all packages.  
+
 	```sh
 	npm install 
 	composer install
 	```
-3. Run Gulp to get started.    
+3. Run Gulp to get started.  
+
 	```sh
 	gulp
 	```
