@@ -1,6 +1,6 @@
 {
     "require": {
-        "ezyang/htmlpurifier": "^4.10",
-        "vlucas/phpdotenv": "^3.3"
+        "vlucas/phpdotenv": "^3.3",
+        "sunra/php-simple-html-dom-parser": "^1.5"
     }
 }
