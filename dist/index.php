@@ -1,68 +1,27 @@
-<?php 
+<?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+$page = (object) array(
+    "type"      => "page-home",
+    "name"      => str_replace('.php', '', basename($_SERVER['PHP_SELF'])),
+    "meta"      => [
+        "title" => "Home",
+        "desc"  => "",
+    ],
+    "plugins"   => [],
+);
 
-require_once "includes/database.php"; 
+include "includes/site-settings.php";
 include "includes/form-settings.php";
-// require_once "includes/scrape.php";
-?>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Crawler</title>
-  </head>
-  <body>
-  
-      <div class="container mt-4">
-        <div class="row">
+// header
+include "components/global/header/header.php";
 
-          <div class="col col-6">
-            <h1 class="font-weight-light mb-3">Books & Magazines</h1>
-            <form method="GET" action="">
-              <div class="form-row">
-                <div class="col">
-                  <input 
-                    type="search" 
-                    name="q" 
-                    class="form-control" 
-                    <?php if(isset($_GET['q'])): echo "value='{$_GET['q']}'"; endif; ?> 
-                    placeholder="Enter a title...">
-                </div>
-                <div class="col">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+// navbar
+include "components/global/navbar/navbar.php";
 
-        <div class="row mt-4">
-            <?php 
-              if( isset($rows) && count($rows) > 0 ): 
-                foreach($rows as $row): 
-                  $row = (object) $row;
-            ?>
-                <div class="col col-12 mb-4">
-                  <div class="card">
-                    <div class="card-body">
-                      <?php echo "<h4>{$row->title}</h4>"; ?>
-                      <?php echo "<p class='badge badge-success'>{$row->price}</p>"; ?>
-                    </div>
-                  </div>
-                </div>
-            <?php 
-                endforeach;
-              endif;
-            ?>
-          </div>
+// hero
+include "components/home/hero/hero.php";
 
-      </div>
-
-  </body>
-</html>
+// footer
+include "components/global/footer/footer-nav.php";
+include "components/global/footer/footer.php";

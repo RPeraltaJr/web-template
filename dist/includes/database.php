@@ -18,6 +18,8 @@ try {
     // die(json_encode(array('outcome' => true)));
 }
 catch(PDOException $ex) {
-    // failed connection
-    die(json_encode(array('outcome' => false, 'message' => 'Unable to connect')));
+    if( in_array($_SERVER['REMOTE_ADDR'], $whitelist) ):
+        // failed connection
+        die(json_encode(array('outcome' => false, 'message' => 'Unable to connect')));
+    endif;
 }
